@@ -21,7 +21,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         loaders: [ 'ts' ],
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /typings/],
         include: __dirname
       }
     ]
