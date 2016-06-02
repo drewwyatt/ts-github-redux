@@ -1,6 +1,5 @@
 var path = require('path')
 var webpack = require('webpack')
-var CommonsChunkPlugin = require('webpack').optimize.CommonsChunkPlugin;
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -23,7 +22,7 @@ module.exports = {
 		filename: '[name].bundle.js'
 	},
 	plugins: [
-		new CommonsChunkPlugin("vendor", "vendor.bundle.js", Infinity),
+		new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js", Infinity),
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({ template: './index.html' })
