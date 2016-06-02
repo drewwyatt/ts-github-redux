@@ -1,9 +1,9 @@
 /// <reference path="../typings/index.d.ts" />
 import * as React from 'react';
 import { render } from 'react-dom';
-import {MyBasicComponent} from './components'
+import {Root} from './containers';
 
 render(
-	<MyBasicComponent />,
+	<Root />,
 	document.getElementById('root')
 );

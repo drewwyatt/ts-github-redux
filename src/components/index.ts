@@ -1,4 +1,6 @@
-import {MyBasicComponent} from './basic-component';
+import {Boom} from './boom';
+import {Pow} from './pow';
 export {
-	MyBasicComponent
+	Boom,
+	Pow
 };
