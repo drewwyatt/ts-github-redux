@@ -5,7 +5,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	devtool: 'cheap-module-eval-source-map',
 	entry: [
-		path.resolve('./src/index')	
+		'webpack-hot-middleware/client',
+		path.resolve('./src/index'),	
 	],
 	output: {
 		path: path.join(__dirname, 'dist'),
@@ -13,12 +14,14 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.optimize.OccurrenceOrderPlugin(),
+		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({ template: './index.html' })
 	],
 	module: {
         loaders: [
             { 	test: /\.tsx?$/, 
 				loaders: [
+					'react-hot',
 					'babel?presets[]=es2015',                  
 					'ts-loader'
 				] }
