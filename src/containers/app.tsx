@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Header } from './header';
+import { Header } from '../components';
 import { Home } from './home';
 
 export class App extends React.Component<any, void> {
