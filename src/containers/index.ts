@@ -1,10 +1,11 @@
 import {App} from './app';
+import {Header} from './header';
+import {Home} from './home';
 import {PageOne} from './page-one';
-import {PageTwo} from './page-two';
 import {Root} from './root';
 export {
 	App,
+	Home,
 	PageOne,
-	PageTwo,
 	Root
 };
