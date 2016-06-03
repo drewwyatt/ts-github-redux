@@ -1,18 +1,11 @@
 import * as React from 'react';
-import { Pow } from '../components'
-import { Router, Link, hashHistory } from 'react-router';
+import {Router, hashHistory} from 'react-router';
 import routes from '../routes';
 
-export function Root(): JSX.Element {
-	return (
-		<fieldset>
-			<h1>Root Component</h1>
-			<Pow />
-			<hr />
-			<a href="/">Page One</a>
-			<a href="/boom">Page Two</a>
-			<hr />
+export class Root extends React.Component<void, void> {
+	render(): JSX.Element {
+		return (
 			<Router history={hashHistory} routes={routes} />
-		</fieldset>
-	);
+		);
+	}
 }
